@@ -1,0 +1,184 @@
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE SEQUENCE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+DELETE 0
+COMMIT
+INSERT 0 15
+INSERT 0 5
+BEGIN
+INSERT 0 10
+INSERT 0 2
+INSERT 0 4
+COMMIT
+INSERT 0 6
+INSERT 0 8
+INSERT 0 8
+INSERT 0 8
+INSERT 0 8
+INSERT 0 7
+INSERT 0 4
+    svnr    | f_calc_salary 
+------------+---------------
+ 7564280686 |      33400.00
+ 9382030476 |             0
+ 2731090234 |             0
+ 1238231257 |      33400.00
+ 2312121063 |             0
+ 4929141172 |             0
+ 5454201053 |      10020.00
+ 5521210291 |             0
+ 5231100989 |      25050.00
+ 8391031029 |             0
+(10 rows)
+
+UPDATE 2
+    svnr    | f_calc_salary 
+------------+---------------
+ 7564280686 |      33400.00
+ 9382030476 |             0
+ 2731090234 |        744.00
+ 1238231257 |      33400.00
+ 2312121063 |             0
+ 4929141172 |             0
+ 5454201053 |      10020.00
+ 5521210291 |        130.00
+ 5231100989 |      25050.00
+ 8391031029 |             0
+(10 rows)
+
+ svnr | jahr | monat | honorar 
+------+------+-------+---------
+(0 rows)
+
+ p_calc_salary 
+---------------
+ 
+(1 row)
+
+    svnr    | jahr | monat | honorar  
+------------+------+-------+----------
+ 7564280686 | 2014 | 11    | 33400.00
+ 9382030476 | 2014 | 11    |     0.00
+ 2731090234 | 2014 | 11    |   744.00
+ 1238231257 | 2014 | 11    | 33400.00
+ 2312121063 | 2014 | 11    |     0.00
+ 4929141172 | 2014 | 11    |     0.00
+ 5454201053 | 2014 | 11    | 10020.00
+ 5521210291 | 2014 | 11    |   130.00
+ 5231100989 | 2014 | 11    | 25050.00
+ 8391031029 | 2014 | 11    |     0.00
+(10 rows)
+
+    arzt    |  patient   | krankheit | dauer | abgerechnet 
+------------+------------+-----------+-------+-------------
+ 9382030476 | 4916080163 |         3 |    10 | f
+ 8391031029 | 4539180893 |         5 |     2 | f
+ 4929141172 | 4539180893 |         5 |     3 | f
+ 2312121063 | 5328090565 |         6 |     1 | f
+ 2731090234 | 5139210794 |         2 |     1 | t
+ 2731090234 | 5287081081 |         7 |     4 | t
+ 5521210291 | 5139210794 |         2 |     1 | t
+(7 rows)
+
+    svnr    | f_calc_salary 
+------------+---------------
+ 7564280686 |             0
+ 9382030476 |             0
+ 2731090234 |             0
+ 1238231257 |             0
+ 2312121063 |             0
+ 4929141172 |             0
+ 5454201053 |             0
+ 5521210291 |             0
+ 5231100989 |             0
+ 8391031029 |             0
+(10 rows)
+
+ p_move_healed 
+---------------
+ 
+(1 row)
+
+    svnr    | ak_id |    von     |    bis     | behandelt_in | hat 
+------------+-------+------------+------------+--------------+-----
+ 5287081081 |     1 | 2014-10-28 | 2014-11-03 |           10 |   5
+ 5287081081 |     2 | 2014-10-05 | 2014-10-10 |           10 |   3
+ 5287081081 |     3 | 2014-10-13 | 2014-10-14 |           10 |   5
+ 4916080163 |     4 | 2014-10-12 | 2014-10-12 |           10 |   1
+ 5287081081 |     5 | 2014-11-12 | 2014-11-12 |           10 |   7
+ 5139210794 |     6 | 2014-11-12 | 2014-11-12 |           10 |   2
+(6 rows)
+
+    arzt    |  patient   | krankheit | dauer | abgerechnet 
+------------+------------+-----------+-------+-------------
+ 9382030476 | 4916080163 |         3 |    10 | f
+ 8391031029 | 4539180893 |         5 |     2 | f
+ 4929141172 | 4539180893 |         5 |     3 | f
+ 2312121063 | 5328090565 |         6 |     1 | f
+(4 rows)
+
+DROP TRIGGER
+DROP FUNCTION
+DROP TRIGGER
+DROP FUNCTION
+DROP TRIGGER
+DROP FUNCTION
+DROP FUNCTION
+DROP FUNCTION
+DROP FUNCTION
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+ALTER TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP TABLE
+DROP SEQUENCE
+DROP SEQUENCE
+DROP SEQUENCE
+DROP SEQUENCE
+DROP SEQUENCE

@@ -1,0 +1,7 @@
+*.dia~
+*.pdf
+dbai3/build
+dbai3/.idea
+*.zip
+.idea
+*.iml

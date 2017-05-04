@@ -1,0 +1,24 @@
+psql:create.sql:11: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "person_pkey" for table "person"
+psql:create.sql:18: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "patient_pkey" for table "patient"
+psql:create.sql:28: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "mitarbeiter_pkey" for table "mitarbeiter"
+psql:create.sql:35: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "krankenhaus_pkey" for table "krankenhaus"
+psql:create.sql:45: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "abteilung_pkey" for table "abteilung"
+psql:create.sql:53: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "arzt_pkey" for table "arzt"
+psql:create.sql:62: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "lohnzettel_pkey" for table "lohnzettel"
+psql:create.sql:68: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "krankheit_pkey" for table "krankheit"
+psql:create.sql:74: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "klasse_pkey" for table "klasse"
+psql:create.sql:81: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "zugeordnet_pkey" for table "zugeordnet"
+psql:create.sql:90: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "spezialisiert_pkey" for table "spezialisiert"
+psql:create.sql:100: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "behandlung_pkey" for table "behandlung"
+psql:create.sql:112: NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "akteneintrag_pkey" for table "akteneintrag"
+psql:insert.sql:2: ERROR:  syntax error at or near "#"
+LINE 1: #Hier Ihre Lösung oder die Musterlösung einfügen
+        ^
+psql:insert.sql:18: WARNING:  there is no transaction in progress
+psql:test.sql:32: ERROR:  Der zu behandelnde Patient ist bereits mit einer anderen Krankheit in Behandlung!
+psql:test.sql:35: ERROR:  Der Arzt kann nur Krankheiten behandeln auf die die Abteilung in der er arbeitet, spezialisiert sind.
+psql:test.sql:38: ERROR:  Koordinator muss in der Abteilung arbeiten, die er koordiniert!
+psql:test.sql:41: ERROR:  Leiter muss in einer der Abteilung dieses Krankenhauses arbeiten!
+psql:test.sql:44: ERROR:  new row for relation "krankheit" violates check constraint "krankheit_bonus_check"
+psql:test.sql:47: ERROR:  new row for relation "mitarbeiter" violates check constraint "mitarbeiter_gehalt_check"
+psql:test.sql:50: ERROR:  new row for relation "akteneintrag" violates check constraint "akteneintrag_check"

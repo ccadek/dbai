@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dbs2014-bsp3" default="build" basedir=".">
+	<property name="lib.dir" value="lib" />
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="resources.dir" value="resources" />
+
+    <property name="zip.name" value="dbs-exercise3-ws14.zip"/>
+
+	<property name="driver.jar" value="postgresql-9.1.jdbc4.jar" />
+
+    <property name="connection.host" value="localhost" />
+    <property name="connection.port" value="5432" />
+
+    <property name="database" value="TODO FILL IN" />
+    <property name="username" value="TODO FILL IN" />
+    <property name="password" value="TODO FILL IN" />
+
+	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="${driver.jar}" />
+		</fileset>
+		<pathelement location="${build.dir}" />
+	</path>
+
+	<target name="build">
+		<mkdir dir="${build.dir}" />
+		<javac srcdir="${src.dir}" 
+               destdir="${build.dir}" 
+               deprecation="on" includeantruntime="false" debug="on" classpathref="classpath" />
+    </target>
+
+	<target name="run-szenario1-a" depends="build">
+		<java classname="dbs.ws14.Szenario1" classpathref="classpath">
+			<arg value="a" />
+			<arg value="${connection.host}" />
+			<arg value="${connection.port}" />
+			<arg value="${database}" />
+			<arg value="${username}" />
+			<arg value="${password}" />
+		</java>
+	</target>
+
+	<target name="run-szenario1-b" depends="build">
+		<java classname="dbs.ws14.Szenario1" classpathref="classpath">
+			<arg value="b" />
+			<arg value="${connection.host}" />
+			<arg value="${connection.port}" />
+			<arg value="${database}" />
+			<arg value="${username}" />
+			<arg value="${password}" />
+		</java>
+	</target>
+
+	<target name="run-szenario2-a" depends="build">
+		<java classname="dbs.ws14.Szenario2" classpathref="classpath">
+			<arg value="a" />
+			<arg value="${connection.host}" />
+			<arg value="${connection.port}" />
+			<arg value="${database}" />
+			<arg value="${username}" />
+			<arg value="${password}" />
+		</java>
+	</target>
+
+	<target name="run-szenario2-b" depends="build">
+		<java classname="dbs.ws14.Szenario2" classpathref="classpath">
+			<arg value="b" />
+			<arg value="${connection.host}" />
+			<arg value="${connection.port}" />
+			<arg value="${database}" />
+			<arg value="${username}" />
+			<arg value="${password}" />
+		</java>
+	</target>
+
+	<target name="run-szenario3" depends="build">
+		<java classname="dbs.ws14.Szenario3" classpathref="classpath">
+			<arg value="${connection.host}" />
+			<arg value="${connection.port}" />
+			<arg value="${database}" />
+			<arg value="${username}" />
+			<arg value="${password}" />
+		</java>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+    
+    <target name="zip">
+        <delete file="${zip.name}" />
+        <zip destfile="${zip.name}" encoding="UTF-8">
+            <fileset dir="${src.dir}"/>
+            <fileset dir="${resources.dir}"/>
+        </zip>
+    </target>
+</project>
